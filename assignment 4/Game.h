@@ -5,7 +5,7 @@ using namespace std;
 
 class Game
 {
-
+private:
 	string gameTitle;
 
 	string gameDev;
@@ -20,7 +20,6 @@ class Game
 public:
 
 	Game();
-	~Game();
 
 	string getgameTitle();
 
@@ -33,7 +32,9 @@ public:
 	string getgamePlatform();
 
 	double getgameCost();
+	//getter
 
+	void addGameLibrary();
 
 	void setgameTitle(string T);
 
@@ -46,6 +47,7 @@ public:
 	void setgamePlatform(string P);
 
 	void setgameCost(double C);
+	//setter
 
-	friend ostream& operator<<(ostream& output, Game& Gamelibrary);
+	friend ostream& operator<<(ostream& os, Game&i);
 };

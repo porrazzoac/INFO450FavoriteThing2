@@ -8,15 +8,18 @@ using namespace std;
 class Library
 
 {
+protected:
+	Game library[100];
 
-	Game library[1000];
-
-	int Librarysize;
+	int Lsize;
 
 public:
 
 	Library();
+	void readGame();
+	void addGame();
+	void displayList();
+	void saveGame();
 
-	int addGame();
 
 };

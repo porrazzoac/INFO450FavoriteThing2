@@ -47,6 +47,7 @@ double Game::getgameCost()
 {
 	return gameCost;
 }
+//getting input
 
 void Game::setgameTitle(string T)
 {
@@ -72,43 +73,39 @@ void Game::setgameCost(double C)
 {
 	gameCost = C;
 }
+//setting input
 
-void Game::addgame()
+void Game::addGameLibrary()
 {
 	do
 	{
 		cout << "Please enter the game Title: " << endl;
-		cin >> gameTitle;
+		getline(cin, gameTitle);
 
 		cout << "Please enter the game Developer: " << endl;
-		cin >> gameDev;
+		getline(cin, gameDev);
 
 
 		cout << "Please enter the game Genre: " << endl;
-		cin >> gameGenre;
+		getline(cin, gameGenre);
 
 
 		cout << "Please enter the game Rating: " << endl;
-		cin >> gameRating;
+		getline(cin, gameRating);
 
 
 		cout << "Please enter the game Platform: " << endl;
-		cin >> gamePlatform;
+		getline(cin, gamePlatform);
 
 
 		cout << "Please enter the game Cost: " << endl;
 		cin >> gameCost;
 		cin.ignore();
-	} while (gamePlatform.empty());
+	} while (gameTitle == " ");
 }
 
-ostream& operator << (ostream& output, Game& library)
+ostream& operator << (ostream& os, Game& i)
 {
-	output << "Game: " << library.gameTitle << endl;
-	output << "Developer: " << library.gameDev << endl;
-	output << "Genre: " << library.gameGenre << endl;
-	output << "Rating: " << library.gameRating << endl;
-	output << "Platform: " << library.gamePlatform << endl;
-	output << "Cost: " << library.gameCost << endl;
-	return output;
+	os << "Game" << i.gameTitle << i.gameDev << i.gameGenre << i.gameRating << i.gamePlatform << i.gameCost << endl;
+	return os;
 }
