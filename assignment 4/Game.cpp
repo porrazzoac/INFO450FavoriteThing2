@@ -104,8 +104,8 @@ void Game::addGameLibrary()
 	} while (gameTitle == " ");
 }
 
-ostream& operator << (ostream& os, Game& i)
+ostream& operator << (ostream& output, Game& i)
 {
-	os << "Game" << i.gameTitle << i.gameDev << i.gameGenre << i.gameRating << i.gamePlatform << i.gameCost << endl;
-	return os;
+	output << "Game" << i.gameTitle << i.gameDev << i.gameGenre << i.gameRating << i.gamePlatform << i.gameCost << endl;
+	return output;
 }

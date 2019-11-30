@@ -49,5 +49,5 @@ public:
 	void setgameCost(double C);
 	//setter
 
-	friend ostream& operator<<(ostream& os, Game&i);
+	friend ostream& operator<<(ostream& output, Game&i);
 };
