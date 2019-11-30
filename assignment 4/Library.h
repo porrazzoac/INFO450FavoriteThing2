@@ -16,10 +16,12 @@ protected:
 public:
 
 	Library();
+	~Library();
 	void readGame();
 	void addGame();
 	void displayList();
 	void saveGame();
+
 
 
 };

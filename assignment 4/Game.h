@@ -20,6 +20,7 @@ private:
 public:
 
 	Game();
+	~Game();
 
 	string getgameTitle();
 
